@@ -544,6 +544,62 @@ body.is-top .header{
 #sobre .about__text p{ margin:0 0 .75rem; }
 #sobre .about__text p:last-of-type{ margin-bottom:0; }
 
+.cta-card{
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: clamp(28px, 5vw, 42px);
+  text-align: left;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cta-card__title{
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+}
+
+.cta-card__text{
+  margin: 0 0 20px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+/* ==================================================
+   CTA + FAQ — espaçamento (GARANTIDO)
+   - funciona mesmo que o FAQ não tenha .section--faq
+================================================== */
+
+/* CTA mais compacto */
+.section--cta{
+  padding: 2.2rem 0;
+}
+
+/* Se o FAQ vem logo após o CTA (via id), reduz padding e margem do header */
+.section--cta + section#faq{
+  padding-top: 2.2rem;
+}
+
+.section--cta + section#faq .section__head{
+  margin-bottom: 22px;
+}
+
+/* Ajuste extra: evita “buraco” por margin-top acidental */
+.section--cta + section#faq .section__head{
+  margin-top: 0;
+}
+
+@media (max-width: 575.98px){
+  .section--cta{ padding: 1.8rem 0; }
+  .section--cta + section#faq{ padding-top: 1.8rem; }
+  .section--cta + section#faq .section__head{ margin-bottom: 18px; }
+}
+
 /* ==================================================
    CONTACT
 ================================================== */
@@ -998,7 +1054,9 @@ body.is-top .header{
    RESPONSIVE (SEM ALTERAR O DESKTOP)
    - Mantém o layout desktop como está
    - Ajusta grids/fluxos, legibilidade, espaçamentos e touch targets
+   - Mobile focado em conversão (botões full, hero mais claro, CTA card premium)
 ================================================== */
+
 
 /* ------------------------------
    Tablet (576px a 991.98px)
@@ -1014,7 +1072,7 @@ body.is-top .header{
   /* Header: mantém visual, só melhora encaixe */
   .nav{
     gap: 1rem;
-    flex-wrap: wrap; /* evita quebrar/estourar em telas menores */
+    flex-wrap: wrap;
     justify-content: flex-end;
   }
   .nav__link{ font-size: 1.05rem; }
@@ -1059,45 +1117,51 @@ body.is-top .header{
   }
 }
 
+
 /* ------------------------------
    Mobile (até 575.98px)
 ------------------------------ */
 @media (max-width: 575.98px){
 
-  /* Container: mais “respiro” lateral (sem mexer no desktop) */
+  /* Container: respiro lateral */
   .container{ padding: 0 1rem; }
 
-  /* Seções: reduz altura total */
-  .section{ padding: 3.6rem 0; }
-  .section__head{ margin: 0 auto 34px; }
+  /* Seções: um pouco mais compactas (melhor ritmo no mobile) */
+  .section{ padding: 3.2rem 0; }
+  .section__head{ margin: 0 auto 28px; }
 
   /* Tipos: mantém identidade, só escala para leitura */
   .section__title{ font-size: clamp(26px, 7vw, 34px); }
-  .section__subtitle{ font-size: 15px; }
+  .section__subtitle{ font-size: 15px; line-height: 1.55; }
 
-  /* Botões: toque confortável + largura melhor quando necessário */
-  .btn{ min-height: 44px; }
-  .hero__actions .btn{ width: 100%; }
-  .hero__actions{ gap: .7rem; }
+  /* Header height menor no mobile (offset acompanha) */
+  :root{ --header-h: 64px; }
 
-  /* Header: evita quebra feia da nav */
-  :root{ --header-h: 64px; } /* só no mobile (offset/hero acompanham) */
+  /* Botões: toque confortável */
+  .btn{ min-height: 46px; }
 
+  /* Header: centraliza logo + nav abaixo, sem quebrar */
   .brand__logo{
     width: 56px;
     height: 56px;
   }
 
   .header__inner{
-    gap: .75rem;
-    flex-wrap: wrap; /* permite a nav ir para baixo se precisar */
+    justify-content: center;   /* ✅ centraliza no mobile */
+    gap: .7rem;
+    flex-wrap: wrap;
     padding: .35rem 0;
+  }
+
+  .brand{
+    width: 100%;
+    justify-content: center;   /* ✅ logo no centro */
   }
 
   .nav{
     width: 100%;
     justify-content: center;
-    gap: .95rem;
+    gap: .85rem;
     flex-wrap: wrap;
     padding-bottom: .25rem;
   }
@@ -1105,13 +1169,15 @@ body.is-top .header{
   .nav__link{
     font-size: 1rem;
     line-height: 1.1;
-    padding: .35rem .15rem; /* melhora toque sem parecer “botão” */
+    padding: .45rem .35rem; /* melhora toque sem virar botão feio */
   }
 
-  /* Hero: sem cortar, sem quebrar */
+  /* ==========================
+     HERO (VENDA NO MOBILE)
+  ========================== */
   .hero__center{
     max-width: 560px;
-    padding: calc(var(--header-h) + 2rem) 0 3rem;
+    padding: calc(var(--header-h) + 1.6rem) 0 2.6rem;
   }
 
   .hero__kicker{
@@ -1120,21 +1186,35 @@ body.is-top .header{
   }
 
   .hero__headline{
-    font-size: clamp(2rem, 9.2vw, 2.6rem);
-    line-height: 1.08;
+    font-size: clamp(1.95rem, 9vw, 2.45rem);
+    line-height: 1.12;
+    margin-bottom: .85rem;
   }
 
   .hero__subheadline{
-    font-size: clamp(1rem, 4.5vw, 1.1rem);
+    font-size: 1.02rem;
+    line-height: 1.45;
+    opacity: .92;
+  }
+
+  /* CTAs do Hero em coluna (dedo agradece) */
+  .hero__actions{
+    gap: .65rem;
+  }
+  .hero__actions .btn{
+    width: 100%;
+    justify-content: center;
   }
 
   .hero__scroll{
-    margin-top: 2.2rem;
+    margin-top: 1.9rem;
     width: 42px;
     height: 60px;
   }
 
-  /* Grids -> 1 coluna (sem distorcer) */
+  /* ==========================
+     GRIDS -> 1 COLUNA
+  ========================== */
   .grid--2{ grid-template-columns: 1fr; }
   .pricing{ grid-template-columns: 1fr; }
   .portfolio-grid{ grid-template-columns: 1fr; }
@@ -1142,7 +1222,46 @@ body.is-top .header{
   .steps{ grid-template-columns: 1fr; }
   .sites-grid{ grid-template-columns: 1fr; }
 
-  /* Cards: padding um pouco menor para caber melhor */
+  /* ==========================
+     SITES (CONVERSÃO)
+     - botões em coluna e full width
+  ========================== */
+  .site-card__actions{
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem;
+  }
+
+  .site-card__actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ==========================
+     CTA CARD (MOBILE PREMIUM)
+     - fica “vendedor” e sem ficar gigante
+  ========================== */
+  .cta-card{
+    padding: 22px !important;
+    border-radius: 18px;
+  }
+
+  .cta-card__title{
+    font-size: 1.55rem !important;
+    line-height: 1.18;
+  }
+
+  .cta-card__text{
+    font-size: .98rem;
+    line-height: 1.55;
+  }
+
+  .cta-card .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Cards: padding menor para caber melhor */
   .service-card,
   .price-card,
   .testimonial,
@@ -1161,12 +1280,9 @@ body.is-top .header{
   /* About: empilha e centraliza */
   .about{
     grid-template-columns: 1fr;
-    gap: 1.4rem;
+    gap: 1.3rem;
   }
-
-  .about__carousel{
-    max-width: 320px;
-  }
+  .about__carousel{ max-width: 320px; }
 
   /* Contato: 1 coluna */
   .contact{
@@ -1205,19 +1321,6 @@ body.is-top .header{
   .whats-float__icon img{ width: 44px; height: 44px; }
 }
 
-/* Centraliza o logo F7 no mobile */
-@media (max-width: 575.98px){
-
-  .header__inner{
-    justify-content: center;
-  }
-
-  .brand{
-    width: 100%;
-    justify-content: center;
-  }
-
-}
 
 /* ------------------------------
    Desktop (992px a 1199.98px)
@@ -1232,6 +1335,7 @@ body.is-top .header{
   .filters{ flex-wrap: wrap; }
   .nav{ flex-wrap: wrap; }
 }
+
 
 /* ------------------------------
    Extra Large (>= 1200px)
