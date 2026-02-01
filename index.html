@@ -85,7 +85,7 @@
         <div class="about about--media-left">
           <!-- MEDIA (CARROSSEL) -->
           <figure class="about__media" aria-label="Fotos do Filipe Assis">
-            <div class="about__carousel" data-carousel data-interval="4000">
+            <div class="about__carousel" data-carousel data-interval="4000" aria-roledescription="carousel">
               <div class="about__track">
                 <img class="about__slide is-active" src="./img/sobre-01.png" alt="Foto do Filipe Assis" loading="lazy"
                   decoding="async" width="720" height="900" />
@@ -96,7 +96,7 @@
               </div>
 
               <!-- bolinhas no canto inferior esquerdo -->
-              <div class="about__dots" aria-label="Indicadores do carrossel" data-dots>
+              <div class="about__dots" aria-label="Indicadores do carrossel">
                 <button class="about__dot is-active" type="button" aria-label="Ver foto 1" data-dot="0"></button>
                 <button class="about__dot" type="button" aria-label="Ver foto 2" data-dot="1"></button>
                 <button class="about__dot" type="button" aria-label="Ver foto 3" data-dot="2"></button>
@@ -143,6 +143,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- SITES -->
     <section class="section" id="sites" aria-label="Sites" data-solid="true">
@@ -630,7 +631,8 @@
     </span>
   </a>
 
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
+
 </body>
 
 </html>

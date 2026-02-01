@@ -462,6 +462,9 @@ body.is-top .header{
   overflow:hidden;
   border:1px solid var(--border-soft);
   background:#000;
+
+  /* ✅ garante stacking previsível (não interfere no desktop) */
+  isolation: isolate;
 }
 
 .about__track{ position:relative; width:100%; height:100%; }
@@ -475,6 +478,9 @@ body.is-top .header{
   object-position:center;
   opacity:0;
   transition: opacity .4s ease;
+
+  /* ✅ evita “roubar” clique das bolinhas */
+  pointer-events: none;
 }
 
 .about__slide.is-active{ opacity:1; }
@@ -485,7 +491,10 @@ body.is-top .header{
   bottom:14px;
   display:flex;
   gap:8px;
-  z-index:2;
+
+  /* ✅ dots sempre por cima e clicáveis */
+  z-index:10;
+  pointer-events:auto;
 }
 
 .about__dot{
@@ -498,6 +507,9 @@ body.is-top .header{
   cursor:pointer;
   padding:0;
   transition: transform .2s ease, background .2s ease, border-color .2s ease;
+
+  /* ✅ melhora clique no mobile */
+  touch-action: manipulation;
 }
 
 .about__dot:hover{
@@ -508,6 +520,12 @@ body.is-top .header{
 .about__dot.is-active{
   background: var(--accent);
   border-color: var(--accent);
+}
+
+/* ✅ acessibilidade */
+.about__dot:focus-visible{
+  outline: 2px solid rgba(255,255,255,.35);
+  outline-offset: 3px;
 }
 
 .about__caption{ margin-top:.9rem; color: var(--text-muted); font-size:.85rem; }
@@ -924,7 +942,9 @@ body.is-top .header{
 /* ===== BALÃO FIXO NO BODY (NUNCA É CORTADO) ===== */
 .whats-float-bubble{
   position: fixed;
-  z-index: 1000000; /* maior que o botão */
+  /* ✅ acima do botão, abaixo do header */
+  z-index: 1000001;
+
   top: 0;
   left: 0;
 
