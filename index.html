@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Filipe Assis | Web Designer</title>
+  <meta name="description"
+    content="Sites rápidos e artes que vendem para negócios locais. Criação de site + design gráfico (cartão, panfleto, personalizados) com entrega rápida e padrão profissional." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Filipe Assis | Sites + Design Gráfico" />
+  <meta property="og:description"
+    content="Presença completa para negócios locais: site + impresso com a mesma identidade." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:url" content="https://seu-dominio.com/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />  
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <!-- LOGO (somente) -->
+      <a class="brand" href="#home" aria-label="Voltar ao topo">
+        <img class="brand__logo is-white" src="./img/logo.webp" alt="Logo Filipe Assis" width="100" height="100" />
+      </a>
+
+      <!-- Menu atualizado -->
+      <nav class="nav" aria-label="Menu principal">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#sobre">Sobre</a>
+        <a class="nav__link" href="#sites">Sites</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+        <a class="nav__link" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HOME / Hero -->
+    <section id="home" class="hero hero--cover" aria-label="Home">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner hero__inner--center">
+        <div class="hero__center">
+          <p class="hero__kicker">presença completa pra negócios locais</p>
+
+          <h1 class="hero__headline">
+            Sites que carregam rápido.
+          </h1>
+
+          <p class="hero__subheadline">
+            Design que vende no digital e no impresso.
+          </p>
+
+          <a class="hero__scroll" href="#sobre" aria-label="Rolar para baixo">
+            <span class="hero__mouse" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section--about" id="sobre" aria-label="Sobre" data-solid="true">
+      <!-- fundo sólido interno (pra “selar” e não deixar o hero aparecer por trás) -->
+      <div class="section__bg" aria-hidden="true"></div>
+
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title section__title--sobre">Sobre</h2>
+        </header>
+
+        <div class="about about--media-left">
+          <!-- MEDIA (CARROSSEL) -->
+          <figure class="about__media" aria-label="Fotos do Filipe Assis">
+            <div class="about__carousel" data-carousel data-interval="4000">
+              <div class="about__track">
+                <img class="about__slide is-active" src="./img/sobre-01.png" alt="Foto do Filipe Assis" loading="lazy"
+                  decoding="async" width="720" height="900" />
+                <img class="about__slide" src="./img/sobre-02.png" alt="Foto do Filipe Assis" loading="lazy"
+                  decoding="async" width="720" height="900" />
+                <img class="about__slide" src="./img/sobre-03.png" alt="Foto do Filipe Assis" loading="lazy"
+                  decoding="async" width="720" height="900" />
+              </div>
+
+              <!-- bolinhas no canto inferior esquerdo -->
+              <div class="about__dots" aria-label="Indicadores do carrossel" data-dots>
+                <button class="about__dot is-active" type="button" aria-label="Ver foto 1" data-dot="0"></button>
+                <button class="about__dot" type="button" aria-label="Ver foto 2" data-dot="1"></button>
+                <button class="about__dot" type="button" aria-label="Ver foto 3" data-dot="2"></button>
+              </div>
+            </div>
+          </figure>
+
+          <!-- TEXTO -->
+          <div class="about__text">
+            <p>Olá! Me chamo Filipe Assis.</p>
+
+            <p>
+              Sou desenvolvedor Front-end, focado em criar sites rápidos, bem estruturados e pensados para gerar
+              resultado real.
+              Trabalho com HTML, CSS, JavaScript e ferramentas modernas como o VS Code, sempre unindo performance,
+              design limpo e
+              uma experiência clara para quem acessa.
+            </p>
+
+            <p>
+              Antes do código, construí minha base no ramo gráfico. Tenho mais de 10 anos de experiência como técnico e
+              operador
+              de máquinas digitais, o que me trouxe atenção aos detalhes, visão de processo e padrão profissional —
+              valores que
+              aplico hoje no desenvolvimento de sites.
+            </p>
+
+            <p>
+              Além da vida profissional, sou pai da Aurora, minha maior motivação. A paternidade me ensinou sobre
+              responsabilidade,
+              propósito e equilíbrio, e tudo o que construo hoje carrega esse compromisso: evoluir, entregar qualidade e
+              gerar valor
+              de verdade.
+            </p>
+
+            <div class="about__cta">
+              <a class="btn btn--primary"
+                href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20fechar%20um%20projeto.%20Vamos%20conversar%3F"
+                target="_blank" rel="noopener">
+                Chamar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SITES -->
+    <section class="section" id="sites" aria-label="Sites" data-solid="true">
+      <div class="section__bg" aria-hidden="true"></div>
+
+      <div class="container">
+        <header class="section__head section__head--center">
+          <h2 class="section__title">Sites</h2>
+          <p class="section__subtitle">
+            Alguns modelos reais que eu desenvolvi — prontos pra adaptar pro seu negócio.
+          </p>
+        </header>
+
+        <div class="sites-grid">
+          <!-- CARD 01 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site Creche - Mundo Mágico">
+              <img src="./img/01-site-creche.webp" alt="Preview do site Creche - Mundo Mágico" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">Creche - Mundo Mágico</h3>
+              <p class="site-card__text">
+                Site institucional para Creche Mundo Mágico.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Creche/" target="_blank"
+                  rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 02 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site Ricardo - Móveis Sob Medida">
+              <img src="./img/02-site-ricardo.webp" alt="Preview do site Ricardo - Móveis Sob Medida" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">Ricardo - Móveis Sob Medida</h3>
+              <p class="site-card__text">
+                Site institucional para Ricardo Móveis Sob Medida.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Cadinho/" target="_blank"
+                  rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 03 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site Aline - Tattoo Artist">
+              <img src="./img/03-site-aline.webp" alt="Preview do site Aline - Tattoo Artist" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">Aline - Tattoo Artist</h3>
+              <p class="site-card__text">
+                Site institucional Aline Tattoo Artist.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Aline/" target="_blank"
+                  rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 04 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site Tamires - Nutricionista">
+              <img src="./img/04-site-tamires.webp" alt="Preview do site Tamires - Nutricionista" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">Tamires - Nutricionista</h3>
+              <p class="site-card__text">
+                Site institucional para Tamires Nutricionista.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Tamires/" target="_blank"
+                  rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 05 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site InkFlow - Studio Tattoo">
+              <img src="./img/05-site-inkflow.webp" alt="Preview do site InkFlow - Studio Tattoo" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">InkFlow - Studio Tattoo</h3>
+              <p class="site-card__text">
+                Site institucional para Studio Inkflow Tattoo.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Inkflow/" target="_blank"
+                  rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 06 -->
+          <article class="site-card">
+            <a class="site-card__media" href="#" target="_blank" rel="noopener"
+              aria-label="Ver site Fernanda - Massoterapeuta">
+              <img src="./img/06-site-fernanda.webp" alt="Preview do site Fernanda - Massoterapeuta" loading="lazy"
+                decoding="async" width="1200" height="800" />
+            </a>
+
+            <div class="site-card__body">
+              <h3 class="site-card__title">Fernanda - Massoterapeuta</h3>
+              <p class="site-card__text">
+                Site institucional Fernanda Massoterapeuta.
+              </p>
+
+              <div class="site-card__actions">
+                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Fernanda---SPA/"
+                  target="_blank" rel="noopener">Ver site</a>
+                <a class="btn btn--primary btn--small"
+                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+                  target="_blank" rel="noopener">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--faq" id="faq" aria-label="Perguntas frequentes">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <h2 class="section__title">Perguntas Frequentes</h2>
+          <p class="section__subtitle">Respostas rápidas para as dúvidas mais comuns antes de pedir um orçamento.</p>
+        </header>
+
+        <div class="faq" role="list">
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Eu realmente preciso ter um site hoje em dia?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Sim. Hoje o site é a base da presença digital da sua empresa. É onde o cliente encontra informações
+                confiáveis, vê seus serviços, entende seu diferencial e decide se entra em contato. Mesmo usando
+                Instagram ou WhatsApp, o site passa credibilidade profissional e funciona 24 horas por dia.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Redes sociais não substituem um site?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Não. Redes sociais são ótimas para divulgação, mas não são suas — regras, alcance e até o perfil podem
+                mudar. O site é um espaço próprio, estável e profissional, onde você controla tudo: conteúdo, visual,
+                contatos e posicionamento no Google.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Como um site pode ajudar minha empresa a conseguir mais clientes?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Um site bem feito:</p>
+              <ul class="faq__list">
+                <li>Apresenta seus serviços de forma clara</li>
+                <li>Mostra profissionalismo e confiança</li>
+                <li>Facilita o contato rápido (WhatsApp, formulário, ligação)</li>
+                <li>Aparece no Google quando alguém procura pelo seu serviço</li>
+              </ul>
+              <p>Tudo isso aumenta as chances do visitante virar cliente.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">O que o seu site tem de diferente?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Os sites que eu desenvolvo são:</p>
+              <ul class="faq__list">
+                <li>Rápidos e leves (não travam no celular)</li>
+                <li>Bem organizados e fáceis de navegar</li>
+                <li>Pensados para negócios locais</li>
+                <li>Com foco em resultado, não só em aparência</li>
+              </ul>
+              <p>Nada de site pesado, confuso ou genérico.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">O que é SEO e pra que ele serve?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>SEO é um conjunto de técnicas que ajudam seu site a aparecer melhor no Google. Com SEO básico bem
+                feito, quando alguém pesquisar pelo seu serviço na sua cidade, seu site tem mais chances de ser
+                encontrado — sem depender só de anúncios pagos.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Meu site já vem com SEO?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Sim. Todos os sites já são entregues com SEO essencial, incluindo:</p>
+              <ul class="faq__list">
+                <li>Estrutura correta de títulos</li>
+                <li>Textos pensados para busca</li>
+                <li>Organização técnica do código</li>
+                <li>Boa performance (velocidade)</li>
+              </ul>
+              <p>Isso já coloca seu site na frente de muitos concorrentes.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">O site funciona bem no celular?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Com certeza. O site é 100% responsivo, ou seja, funciona perfeitamente em celular, tablet e computador.
+                Hoje a maioria dos acessos vem do celular — isso é prioridade no desenvolvimento.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Em quanto tempo meu site fica pronto?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Depende do projeto, mas sites institucionais e one page geralmente ficam prontos em poucos dias, após o
+                alinhamento das informações. A ideia é entregar rápido, com qualidade e sem enrolação.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
+              <span class="faq__q">Ter um site é caro?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Não. Caro é ficar invisível quando alguém procura exatamente o que você vende.</p>
+
+              <p>
+                Um site bem feito é um investimento que trabalha 24 horas por dia: passa credibilidade, explica seus
+                serviços do jeito certo, mostra provas (portfólio/avaliações) e leva o cliente direto pro WhatsApp.
+                Enquanto você está atendendo, dormindo ou fechado, ele continua trazendo gente interessada.
+              </p>
+
+              <p>
+                E o melhor: muitas vezes ele se paga com 1 ou 2 clientes que você não pegaria só com redes sociais —
+                porque no Google o cliente já está com intenção de compra. Você deixa de depender só de indicação e
+                começa a ter um canal seu, profissional e previsível pra gerar demanda.
+              </p>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- ✅ CTA final do FAQ -->
+        <div class="faq__cta" aria-label="Chamada para ação">
+          <p class="faq__cta-text">Pronto pra ter um site que traz cliente?</p>
+          <a class="btn btn--primary"
+            href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+            target="_blank" rel="noopener">
+            Pedir orçamento no WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--contact" id="contato" aria-label="Contato">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Contato</h2>
+          <p class="section__subtitle">Me chama no whatsapp e vamos alavancar o seu negócio.</p>
+        </header>
+
+        <div class="contact">
+          <!-- CARD ESQUERDO -->
+          <div class="contact__card">
+            <h3 class="contact__title">Meus contatos</h3>
+            <p class="contact__text">Aqui abaixo você encontra todos os meus contatos.</p>
+
+            <div class="contact__meta contact__meta--premium" aria-label="Lista de contatos">
+              <!-- WhatsApp -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20" src="https://img.icons8.com/material-outlined/24/whatsapp--v1.png"
+                    alt="whatsapp--v1" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">WhatsApp</span>
+                  <a class="link" href="https://wa.me/5551992932891" target="_blank" rel="noopener">+55 (51)
+                    99293-2891</a>
+                </div>
+              </div>
+
+              <!-- E-mail -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20" src="https://img.icons8.com/material-outlined/24/new-post.png"
+                    alt="new-post" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">E-mail</span>
+                  <a class="link" href="mailto:lfilipeassis@gmail.com">lfilipeassis@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Cidade -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20" src="https://img.icons8.com/material-outlined/24/place-marker--v1.png"
+                    alt="place-marker--v1" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">Cidade</span>
+                  <span class="contact__v">Brasil (Atendimento Online)</span>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20"
+                    src="https://img.icons8.com/fluency-systems-regular/48/instagram-new--v1.png"
+                    alt="instagram-new--v1" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">Instagram</span>
+                  <a class="link" href="https://www.instagram.com/assisfilipee/" target="_blank"
+                    rel="noopener">@assisfilipee</a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/linkedin.png"
+                    alt="linkedin" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">LinkedIn</span>
+                  <a class="link" href="https://www.linkedin.com/in/assisfilipee/" target="_blank"
+                    rel="noopener">linkedin.com/in/assisfilipee</a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" />
+                </span>
+                <div class="contact__kv">
+                  <span class="contact__k">GitHub</span>
+                  <a class="link" href="https://github.com/assisfilipee" target="_blank"
+                    rel="noopener">github.com/assisfilipee</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD DIREITO (FORM) -->
+          <form class="form" id="contactForm" aria-label="Formulário de contato">
+            <h3 class="form__title">Digite seus dados e já me diga o que precisa...</h3>
+
+            <label class="field">
+              <span class="field__label">Nome</span>
+              <input class="field__input" type="text" name="name" placeholder="Digite seu nome..."
+                autocomplete="name" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">WhatsApp</span>
+              <input class="field__input" type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">O que você precisa?</span>
+              <select class="field__input" name="service">
+                <option value="Site">Site</option>
+                <option value="Material Gráfico">Material Gráfico</option>
+                <option value="Site + Material Gráfico">Site + Material Gráfico</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Mensagem</span>
+              <textarea class="field__input field__textarea" name="message" rows="5"
+                placeholder="Me conta sobre seu negócio e o que você quer fazer..."></textarea>
+            </label>
+
+            <button class="btn btn--ghost btn--full" type="submit">Enviar</button>
+
+            <p class="form__hint">*Ao clicar em "Enviar" você será redirecionado para o WhatsApp com a mensagem pronta.</p>
+            
+            
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Rodapé">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        © <span id="year">2026</span> Filipe Assis. todos os direitos reservados.
+      </p>
+
+      <div class="footer__links">
+        <a class="link" href="#home">Voltar ao topo</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating CTA -->
+  <a class="whats-float" href="https://wa.me/5551992932891?text=Ol%C3%A1!%20Quero%20pedir%20um%20or%C3%A7amento."
+    target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento no WhatsApp">
+
+    <span class="whats-float__icon" aria-hidden="true">
+      <img width="28" height="28" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="">
+    </span>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
