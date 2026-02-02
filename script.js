@@ -218,33 +218,72 @@
   }
 })();
 
-/* ==================================================
-   FORM CONTATO -> WhatsApp
-================================================== */
 (() => {
-  try {
-    const form = document.getElementById("contactForm");
-    if (!form) return;
+  const form = document.getElementById("contactForm");
+  if (!form) return;
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  const nameEl = form.querySelector('[name="name"]');
+  const phoneEl = form.querySelector('[name="phone"]');
+  const serviceEl = form.querySelector('[name="service"]');
+  const messageEl = form.querySelector('[name="message"]');
 
-      const data = new FormData(form);
-      const name = (data.get("name") || "").toString().trim();
-      const phone = (data.get("phone") || "").toString().trim();
-      const service = (data.get("service") || "").toString().trim();
-      const message = (data.get("message") || "").toString().trim();
+  const clearErrors = () => {
+    form.querySelectorAll(".field__error").forEach((el) => (el.textContent = ""));
+    [nameEl, phoneEl, messageEl].forEach((el) => el && el.classList.remove("is-error"));
+  };
 
-      const text =
-        `Oi Filipe! Meu nome é ${name}.\n` +
-        `WhatsApp: ${phone}\n` +
-        `Preciso de: ${service}\n` +
-        `Mensagem: ${message}`;
+  const setError = (inputEl, msg) => {
+    if (!inputEl) return;
+    const field = inputEl.closest(".field");
+    const errorEl = field ? field.querySelector(".field__error") : null;
+    if (errorEl) errorEl.textContent = msg;
+    inputEl.classList.add("is-error");
+    inputEl.focus();
+  };
 
-      const url = `https://wa.me/5551992932891?text=${encodeURIComponent(text)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
-    });
-  } catch (err) {
-    console.error("[form] erro:", err);
-  }
+  const digits = (v) => (v || "").toString().replace(/\D/g, "");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    clearErrors();
+
+    const name = (nameEl?.value || "").trim();
+    const phone = (phoneEl?.value || "").trim();
+    const service = (serviceEl?.value || "").trim();
+    const message = (messageEl?.value || "").trim();
+
+    if (name.length < 2) {
+      setError(nameEl, "Informe seu nome.");
+      return;
+    }
+
+    const phoneDigits = digits(phone);
+    if (phoneDigits.length < 10) {
+      setError(phoneEl, "Informe um WhatsApp válido com DDD.");
+      return;
+    }
+
+    if (message.length < 10) {
+      setError(messageEl, "Escreva uma mensagem (mínimo 10 caracteres).");
+      return;
+    }
+
+    const text =
+      `Oi Filipe! Tudo bem?\n\n` +
+      `Meu nome é ${name}.\n` +
+      `WhatsApp: ${phone}\n` +
+      `Preciso de: ${service}\n\n` +
+      `Mensagem:\n${message}`;
+
+    const url = `https://wa.me/5551992932891?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener");
+
+    /* ==========================
+       RECARREGA A PÁGINA
+    ========================== */
+    setTimeout(() => {
+      window.location.reload();
+    }, 400);
+  });
 })();
+

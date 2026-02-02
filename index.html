@@ -615,18 +615,21 @@
           </div>
 
           <!-- CARD DIREITO (FORM) -->
-          <form class="form" id="contactForm" aria-label="Formulário de contato">
+          <form class="form" id="contactForm" aria-label="Formulário de contato" novalidate>
             <h3 class="form__title">Digite seus dados e já me diga o que precisa...</h3>
 
             <label class="field">
               <span class="field__label">Nome</span>
-              <input class="field__input" type="text" name="name" placeholder="Digite seu nome..."
-                autocomplete="name" />
+              <input class="field__input" id="cf-name" type="text" name="name" placeholder="Digite seu nome..."
+                autocomplete="name" required minlength="2" />
+              <small class="field__error" aria-live="polite"></small>
             </label>
 
             <label class="field">
               <span class="field__label">WhatsApp</span>
-              <input class="field__input" type="tel" name="phone" placeholder="(00) 00000-0000" autocomplete="tel" />
+              <input class="field__input" id="cf-phone" type="tel" name="phone" placeholder="(00) 00000-0000"
+                autocomplete="tel" inputmode="tel" required />
+              <small class="field__error" aria-live="polite"></small>
             </label>
 
             <label class="field">
@@ -640,17 +643,18 @@
 
             <label class="field">
               <span class="field__label">Mensagem</span>
-              <textarea class="field__input field__textarea" name="message" rows="5"
-                placeholder="Me conta sobre seu negócio e o que você quer fazer..."></textarea>
+              <textarea class="field__input field__textarea" id="cf-message" name="message" rows="5"
+                placeholder="Me conta sobre seu negócio e o que você quer fazer..." required minlength="10"></textarea>
+              <small class="field__error" aria-live="polite"></small>
             </label>
 
             <button class="btn btn--ghost btn--full" type="submit">Enviar</button>
 
-            <p class="form__hint">*Ao clicar em "Enviar" você será redirecionado para o WhatsApp com a mensagem pronta.
+            <p class="form__hint">
+              *Ao clicar em "Enviar" você será redirecionado para o WhatsApp com a mensagem pronta.
             </p>
-
-
           </form>
+
         </div>
       </div>
     </section>
