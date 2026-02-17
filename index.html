@@ -7,8 +7,19 @@
 
   <meta name="theme-color" content="#0f0f10">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW4CNZLSH1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZW4CNZLSH1');
+  </script>
+
+
   <!-- SEO PRINCIPAL -->
-  <title>Criação de Sites Profissionais | Filipe Assis – Front-End</title>
+  <title>Criação de Sites | Filipe Assis</title>
   <meta name="description"
     content="Criação de sites profissionais, rápidos e responsivos. Desenvolvedor Front-End focado em resultados para negócios locais e marcas pessoais." />
   <meta name="robots" content="index,follow" />
@@ -58,7 +69,10 @@
 
     <!-- HOME / Hero -->
     <section id="home" class="hero hero--cover" aria-label="Home">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__img" src="./img/img-topo-1.png" alt="" loading="eager" decoding="async">
+        <span class="hero__overlay" aria-hidden="true"></span>
+      </div>
 
       <div class="container hero__inner hero__inner--center">
         <div class="hero__center">
@@ -80,6 +94,7 @@
       </div>
     </section>
 
+
     <!-- SOBRE -->
     <section class="section section--about" id="sobre" aria-label="Sobre" data-solid="true">
       <!-- fundo sólido interno (pra “selar” e não deixar o hero aparecer por trás) -->
@@ -93,21 +108,48 @@
         <div class="about about--media-left">
           <!-- MEDIA (CARROSSEL) -->
           <figure class="about__media" aria-label="Fotos do Filipe Assis">
-            <div class="about__carousel" data-carousel data-interval="4000" aria-roledescription="carousel">
-              <div class="about__track">
-                <img class="about__slide is-active" src="./img/sobre-01.png" alt="Foto do Filipe Assis" loading="lazy"
-                  decoding="async" width="720" height="900" />
-                <img class="about__slide" src="./img/sobre-02.png" alt="Foto do Filipe Assis" loading="lazy"
-                  decoding="async" width="720" height="900" />
-                <img class="about__slide" src="./img/sobre-03.png" alt="Foto do Filipe Assis" loading="lazy"
-                  decoding="async" width="720" height="900" />
-              </div>
+            <div class="about__mediaCard">
+              <div class="about__carousel" data-carousel data-interval="4000" aria-roledescription="carousel">
+                <div class="about__track">
+                  <img class="about__slide is-active" src="./img/sobre-01.png" alt="Foto do Filipe Assis" loading="lazy"
+                    decoding="async" width="720" height="900" />
+                  <img class="about__slide" src="./img/sobre-02.png" alt="Foto do Filipe Assis" loading="lazy"
+                    decoding="async" width="720" height="900" />
+                  <img class="about__slide" src="./img/sobre-03.png" alt="Foto do Filipe Assis" loading="lazy"
+                    decoding="async" width="720" height="900" />
+                </div>
 
-              <!-- bolinhas no canto inferior esquerdo -->
-              <div class="about__dots" aria-label="Indicadores do carrossel">
-                <button class="about__dot is-active" type="button" aria-label="Ver foto 1" data-dot="0"></button>
-                <button class="about__dot" type="button" aria-label="Ver foto 2" data-dot="1"></button>
-                <button class="about__dot" type="button" aria-label="Ver foto 3" data-dot="2"></button>
+                <!-- overlay premium -->
+                <div class="about__overlay" aria-hidden="true"></div>
+
+                <!-- contador (01/03) -->
+                <div class="about__count" aria-label="Progresso do carrossel">
+                  <span class="about__countNow" data-count-now>01</span>
+                  <span class="about__countSep" aria-hidden="true">/</span>
+                  <span class="about__countAll" data-count-all>03</span>
+                </div>
+
+                <!-- setas (aparecem no hover) -->
+                <div class="about__arrows" aria-hidden="false">
+                  <button class="about__arrow about__arrow--prev" type="button" aria-label="Foto anterior" data-prev>
+                    <span aria-hidden="true">‹</span>
+                  </button>
+                  <button class="about__arrow about__arrow--next" type="button" aria-label="Próxima foto" data-next>
+                    <span aria-hidden="true">›</span>
+                  </button>
+                </div>
+
+                <!-- barras/dots (pills) -->
+                <div class="about__dots" aria-label="Indicadores do carrossel">
+                  <button class="about__dot is-active" type="button" aria-label="Ver foto 1" data-dot="0"></button>
+                  <button class="about__dot" type="button" aria-label="Ver foto 2" data-dot="1"></button>
+                  <button class="about__dot" type="button" aria-label="Ver foto 3" data-dot="2"></button>
+                </div>
+
+                <!-- barra de progresso (thin) -->
+                <div class="about__progress" aria-hidden="true">
+                  <span class="about__progressBar" data-progress></span>
+                </div>
               </div>
             </div>
           </figure>
@@ -144,10 +186,8 @@
             </p>
 
             <div class="about__cta">
-              <a class="btn btn--primary"
-                href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20fechar%20um%20projeto.%20Vamos%20conversar%3F"
-                target="_blank" rel="noopener">
-                Chamar no WhatsApp
+              <a class="btn btn--primary" href="./criacao-de-sites-em-florianopolis.html" rel="noopener">
+                Conheça Minha Metodologia
               </a>
             </div>
           </div>
@@ -155,184 +195,96 @@
       </div>
     </section>
 
-
     <!-- SITES -->
-    <section class="section" id="sites" aria-label="Sites" data-solid="true">
+    <section class="section section--sites" id="sites" aria-label="Sites" data-solid="true">
       <div class="section__bg" aria-hidden="true"></div>
 
       <div class="container">
-        <header class="section__head section__head--center">
-          <h2 class="section__title">Modelos de Sites Profissionais Prontos para Adaptar</h2>
+        <header class="section__head section__head--sites">
+          <h2 class="section__title">Sites</h2>
+
           <p class="section__subtitle">
-            Crio sites rápidos, responsivos e focados em conversão. Escolha um modelo, eu personalizo com a sua
-            identidade e coloco no ar.
+            Modelos prontos com acabamento premium — eu personalizo com a sua identidade e coloco no ar.
           </p>
-          <p class="section__subtitle" style="margin-top: 10px;">
-            Inclui: layout responsivo • performance • formulário/WhatsApp • publicação e suporte inicial
-          </p>
+
+          <div class="sites__pills" aria-label="Benefícios">
+            <span class="pill">Responsivo</span>
+            <span class="pill">Performance</span>
+            <span class="pill">SEO Local</span>
+            <span class="pill">WhatsApp</span>
+            <span class="pill">Formulário</span>
+            <span class="pill">Publicação</span>
+          </div>
+
         </header>
 
-        <div class="sites-cta">
-          <a class="btn btn--primary"
-            href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20site%20profissional.%20Podemos%20conversar%3F"
-            target="_blank" rel="noopener">
-            Quero um site
-          </a>
-        </div>
+        <div class="sites__grid">
 
-        <div class="sites-grid">
           <!-- CARD 01 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site Creche - Mundo Mágico">
+          <article class="siteCard">
+            <a class="siteCard__media" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver site: Creche - Mundo Mágico">
               <img src="./img/01-site-creche.webp" alt="Preview do site Creche - Mundo Mágico" loading="lazy"
-                decoding="async" width="1200" height="800" />
+                decoding="async">
+              <span class="siteCard__shine" aria-hidden="true"></span>
+              <span class="siteCard__tag">Institucional</span>
+              <span class="siteCard__num">01</span>
             </a>
 
-            <div class="site-card__body">
-              <h3 class="site-card__title">Creche - Mundo Mágico</h3>
-              <p class="site-card__text">
-                Site institucional para Creche Mundo Mágico.
-              </p>
+            <div class="siteCard__body">
+              <h3 class="siteCard__title">Creche — Mundo Mágico</h3>
+              <p class="siteCard__text">Site institucional desenvolvido para creche, com foco em apresentação de
+                serviços e geração de contato.</p>
 
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Creche/" target="_blank"
-                  rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
+              <div class="siteCard__actions">
+                <a class="btn btn--ghost btn--sm" href="https://assisfilipee.github.io/Site-Creche/" target="_blank"
+                  rel="noopener noreferrer">Ver Site</a>
               </div>
             </div>
           </article>
 
           <!-- CARD 02 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site Ricardo - Móveis Sob Medida">
+          <article class="siteCard">
+            <a class="siteCard__media" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver site: Ricardo - Móveis Sob Medida">
               <img src="./img/02-site-ricardo.webp" alt="Preview do site Ricardo - Móveis Sob Medida" loading="lazy"
-                decoding="async" width="1200" height="800" />
+                decoding="async">
+              <span class="siteCard__shine" aria-hidden="true"></span>
+              <span class="siteCard__tag">Institucional</span>
+              <span class="siteCard__num">02</span>
             </a>
 
-            <div class="site-card__body">
-              <h3 class="site-card__title">Ricardo - Móveis Sob Medida</h3>
-              <p class="site-card__text">
-                Site institucional para Ricardo Móveis Sob Medida.
-              </p>
+            <div class="siteCard__body">
+              <h3 class="siteCard__title">Ricardo — Móveis Sob Medida</h3>
+              <p class="siteCard__text">Projeto de site institucional responsivo desenvolvido para apresentação de
+                marca/negócio.</p>
 
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Cadinho/" target="_blank"
-                  rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
+              <div class="siteCard__actions">
+                <a class="btn btn--ghost btn--sm" href="https://assisfilipee.github.io/Site-Cadinho/" target="_blank"
+                  rel="noopener noreferrer">Ver Site</a>
               </div>
             </div>
           </article>
 
           <!-- CARD 03 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site Aline - Tattoo Artist">
-              <img src="./img/03-site-aline.webp" alt="Preview do site Aline - Tattoo Artist" loading="lazy"
-                decoding="async" width="1200" height="800" />
+          <article class="siteCard">
+            <a class="siteCard__media" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver site: Aline - Tattoo Artist">
+              <img src="./img/07-site-escola-ingles.png" alt="Preview do site Aline - Tattoo Artist" loading="lazy"
+                decoding="async">
+              <span class="siteCard__shine" aria-hidden="true"></span>
+              <span class="siteCard__tag">Institucional</span>
+              <span class="siteCard__num">03</span>
             </a>
 
-            <div class="site-card__body">
-              <h3 class="site-card__title">Aline - Tattoo Artist</h3>
-              <p class="site-card__text">
-                Site institucional Aline Tattoo Artist.
-              </p>
+            <div class="siteCard__body">
+              <h3 class="siteCard__title">English School — Landing Page</h3>
+              <p class="siteCard__text">Landing page institucional para escola de inglês, focada em experiência do
+                usuário e conversão.</p>
 
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Aline/" target="_blank"
-                  rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 04 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site Tamires - Nutricionista">
-              <img src="./img/04-site-tamires.webp" alt="Preview do site Tamires - Nutricionista" loading="lazy"
-                decoding="async" width="1200" height="800" />
-            </a>
-
-            <div class="site-card__body">
-              <h3 class="site-card__title">Tamires - Nutricionista</h3>
-              <p class="site-card__text">
-                Site institucional para Tamires Nutricionista.
-              </p>
-
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Tamires/" target="_blank"
-                  rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 05 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site InkFlow - Studio Tattoo">
-              <img src="./img/05-site-inkflow.webp" alt="Preview do site InkFlow - Studio Tattoo" loading="lazy"
-                decoding="async" width="1200" height="800" />
-            </a>
-
-            <div class="site-card__body">
-              <h3 class="site-card__title">InkFlow - Studio Tattoo</h3>
-              <p class="site-card__text">
-                Site institucional para Studio Inkflow Tattoo.
-              </p>
-
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Inkflow/" target="_blank"
-                  rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 06 -->
-          <article class="site-card">
-            <a class="site-card__media" href="#" target="_blank" rel="noopener"
-              aria-label="Ver site Fernanda - Massoterapeuta">
-              <img src="./img/06-site-fernanda.webp" alt="Preview do site Fernanda - Massoterapeuta" loading="lazy"
-                decoding="async" width="1200" height="800" />
-            </a>
-
-            <div class="site-card__body">
-              <h3 class="site-card__title">Fernanda - Massoterapeuta</h3>
-              <p class="site-card__text">
-                Site institucional Fernanda Massoterapeuta.
-              </p>
-
-              <div class="site-card__actions">
-                <a class="btn btn--ghost btn--small" href="https://assisfilipee.github.io/Site-Fernanda---SPA/"
-                  target="_blank" rel="noopener">Ver site</a>
-                <a class="btn btn--primary btn--small"
-                  href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
-                  target="_blank" rel="noopener">
-                  Solicitar Orçamento
-                </a>
+              <div class="siteCard__actions">
+                <a class="btn btn--ghost btn--sm" href="https://assisfilipee.github.io/english-school/" target="_blank"
+                  rel="noopener noreferrer">Ver Site</a>
               </div>
             </div>
           </article>
@@ -341,29 +293,29 @@
     </section>
 
     <!-- CTA DE CONVERSÃO -->
-    <section class="section section--cta" id="cta" aria-label="Chamada para ação" data-solid="true">
-      <div class="section__bg" aria-hidden="true"></div>
+    <section class="cta-card" aria-label="Chamada para ação">
+      <div class="cta-card__wrap" data-reveal data-parallax>
 
-      <div class="container">
-        <div class="cta-card">
-          <h2 class="cta-card__title">
-            Pronto para ter um site profissional para o seu negócio?
-          </h2>
+        <span class="cta-card__glow" aria-hidden="true"></span>
+
+        <div class="cta-card__content">
+          <span class="cta-card__badge">criação de sites • grande florianópolis</span>
+
+          <h2 class="cta-card__title">Pronto para tirar seu projeto do papel?</h2>
 
           <p class="cta-card__text">
-            Me conta sobre seu projeto e eu te ajudo a criar um site rápido,
-            responsivo e pensado para gerar resultado no seu mercado.
+            Vamos criar um site rápido, moderno e pensado para
+            gerar resultados reais para o seu negócio.
           </p>
 
-          <a href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20criar%20um%20site%20profissional."
-            target="_blank" rel="noopener" class="btn btn--primary">
-            Falar no WhatsApp
+          <a href="#contato" class="cta-card__btn">
+            Solicitar orçamento
+            <span class="cta-card__btnIcon" aria-hidden="true">→</span>
           </a>
         </div>
+
       </div>
     </section>
-
-
 
     <!-- FAQ -->
     <section class="section section--faq" id="faq" aria-label="Perguntas frequentes">
@@ -373,7 +325,7 @@
           <p class="section__subtitle">Respostas rápidas para as dúvidas mais comuns antes de pedir um orçamento.</p>
         </header>
 
-        <div class="faq" role="list">
+        <div class="faq" role="list" data-reveal>
 
           <details class="faq__item" role="listitem">
             <summary class="faq__summary">
@@ -486,6 +438,19 @@
 
           <details class="faq__item" role="listitem">
             <summary class="faq__summary">
+              <span class="faq__q">Preciso fornecer todo o conteúdo do site?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__content">
+              <p>Não necessariamente. Caso você já tenha textos e imagens, eles podem ser utilizados no projeto. Mas, se
+                preferir, eu também posso orientar na criação do conteúdo, estrutura das páginas e sugestões de textos
+                estratégicos para destacar seus serviços e melhorar a conversão de visitantes em clientes. O objetivo é
+                que o site fique claro, profissional e alinhado com o posicionamento da sua empresa.</p>
+            </div>
+          </details>
+
+          <details class="faq__item" role="listitem">
+            <summary class="faq__summary">
               <span class="faq__q">Ter um site é caro?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </summary>
@@ -512,7 +477,7 @@
         <div class="faq__cta" aria-label="Chamada para ação">
           <p class="faq__cta-text">Pronto pra ter um site que traz cliente?</p>
           <a class="btn btn--primary"
-            href="https://wa.me/5551992932891?text=Oi%20Filipe!%20Quero%20um%20or%C3%A7amento%20para%20um%20site."
+            href="https://wa.me/5548988263159?text=Oi%20Filipe!%20Quero%20fechar%20um%20projeto.%20Vamos%20conversar%3F"
             target="_blank" rel="noopener">
             Pedir orçamento no WhatsApp
           </a>
@@ -544,8 +509,8 @@
                 </span>
                 <div class="contact__kv">
                   <span class="contact__k">WhatsApp</span>
-                  <a class="link" href="https://wa.me/5551992932891" target="_blank" rel="noopener">+55 (51)
-                    99293-2891</a>
+                  <a class="link" href="https://wa.me/5548988263159" target="_blank" rel="noopener">+55 (48)
+                    98826-3159</a>
                 </div>
               </div>
 
@@ -557,7 +522,7 @@
                 </span>
                 <div class="contact__kv">
                   <span class="contact__k">E-mail</span>
-                  <a class="link" href="mailto:lfilipeassis@gmail.com">lfilipeassis@gmail.com</a>
+                  <a class="link" href="mailto:filipe@filipeassis.dev">filipe@filipeassis.dev</a>
                 </div>
               </div>
 
@@ -569,7 +534,7 @@
                 </span>
                 <div class="contact__kv">
                   <span class="contact__k">Cidade</span>
-                  <span class="contact__v">Brasil (Atendimento Online)</span>
+                  <span class="contact__v">Florianópolis | SC</span>
                 </div>
               </div>
 
@@ -662,26 +627,101 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer" aria-label="Rodapé">
-    <div class="container footer__inner">
-      <p class="footer__copy">
-        © <span id="year">2026</span> Filipe Assis. todos os direitos reservados.
-      </p>
+  <footer class="site-footer" aria-label="Rodapé do site">
 
-      <div class="footer__links">
-        <a class="link" href="#home">Voltar ao topo</a>
+    <div class="footer-wrap">
+
+      <div class="footer-brand">
+        <img src="./img/logo.webp" alt="F7" class="footer-logo">
+        <p class="footer-desc">
+          Desenvolvedor web focado em criar sites rápidos, modernos e pensados
+          para gerar clientes. Atendo empresas em Florianópolis e Grande Florianópolis.
+        </p>
       </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Atuação</div>
+        <ul class="footer-list">
+          <li><span>📍 Florianópolis • SC</span></li>
+          <li><a href="./criacao-de-sites-em-florianopolis.html">Criação de Sites em Florianópolis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Navegação</div>
+        <ul class="footer-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#sites">Sites</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Contato</div>
+        <ul class="footer-list">
+          <li><a href="mailto:filipe@filipeassis.dev">filipe@filipeassis.dev</a></li>
+          <li><a href="mailto:contato@filipeassis.dev">contato@filipeassis.dev</a></li>
+          <li><a href="https://wa.me/5548988263159" target="_blank" rel="noopener">(48) 98826-3159</a></li>
+        </ul>
+      </div>
+
     </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 Filipe Assis. Todos os direitos reservados.
+      </div>
+      <a href="#home" class="footer-top">Voltar ao topo ↑</a>
+    </div>
+
   </footer>
 
-  <!-- WhatsApp Floating CTA -->
-  <a class="whats-float" href="https://wa.me/5551992932891?text=Ol%C3%A1!%20Quero%20pedir%20um%20or%C3%A7amento."
-    target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento no WhatsApp">
+  <!-- WhatsApp Floating (abre modal com formulário) -->
+  <div class="floating-actions" aria-label="Ações rápidas">
+    <button class="whats-float" id="openWapp" type="button" aria-label="Abrir WhatsApp" title="Falar no WhatsApp">
+      <span class="whats-float__icon">
+        <img src="./img/icon-whatsapp.png" alt="WhatsApp">
+      </span>
+    </button>
 
-    <span class="whats-float__icon" aria-hidden="true">
-      <img width="28" height="28" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="">
-    </span>
-  </a>
+  </div>
+
+  <!-- Modal WhatsApp -->
+  <div class="wapp-modal" id="wappModal" hidden aria-hidden="true" role="dialog" aria-modal="true"
+    aria-label="Contato via WhatsApp">
+    <div class="wapp-modal__backdrop" data-close="wapp"></div>
+
+    <div class="wapp-modal__panel" role="document">
+      <header class="wapp-modal__head">
+        <div class="wapp-modal__title">Falar no WhatsApp</div>
+        <button class="wapp-modal__close" type="button" id="closeWapp" aria-label="Fechar">×</button>
+      </header>
+
+      <div class="wapp-modal__body">
+        <p class="wapp-modal__note">
+          Ao clicar em <strong>“Enviar”</strong>, você será redirecionado para o <strong>WhatsApp</strong> com a
+          mensagem pronta.
+        </p>
+
+        <form class="wapp-form" id="wappForm" novalidate>
+          <label class="wapp-field">
+            <span class="wapp-field__label">Seu nome</span>
+            <input class="wapp-field__input" type="text" name="name" placeholder="Seu nome" autocomplete="name" />
+          </label>
+
+          <label class="wapp-field">
+            <span class="wapp-field__label">Sua mensagem</span>
+            <textarea class="wapp-field__input wapp-field__textarea" name="message" rows="4"
+              placeholder="Digite sua mensagem..." required></textarea>
+          </label>
+
+          <button class="wapp-btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="./script.js" defer></script>
 
